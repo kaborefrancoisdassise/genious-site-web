@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Réinitialisation simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Bande supérieure violet foncé */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #081952;
+  color: white;
+  padding: 20px 80px;
+}
+
+/* Logo + Texte */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 60px;
+}
+.logo span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Icônes + Texte */
+.opening-hours, .customer-service {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  font-size: 28px;
+  color: orange;
+}
+.opening-hours small,
+.customer-service small {
+  font-size: 12px;
+  display: block;
+}
+.opening-hours strong,
+.customer-service strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Menu principal blanc */
+.main-nav {
+  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86fde8, #acb6e5);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  padding: 15px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.main-nav ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 40px;
+  flex-grow: 1;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.main-nav ul li a:hover {
+  background-color: #f58220; /* Couleur orange vif */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-icon {
+  font-size: 20px;
+  color: #111;
+  cursor: pointer;
+  margin-left: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+  height: 80px;
+  width: 80px; /* fixe la largeur pour faire un carré */
+  border-radius: 50%; /* rend l'image ronde */
+  object-fit: cover;  /* ajuste le contenu à l’intérieur du cercle */
+}
+.logo span {
+  font-size: 1.8rem; /* ou 24px, ou 2em selon ton style */
+  font-weight: bold;
+  color: #fff; /* ou une autre couleur */
+  line-height: 0.8;
 }
