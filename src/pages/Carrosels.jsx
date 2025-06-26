@@ -1,12 +1,10 @@
-// src/pages/Carrosels.jsx
 import React, { useState, useEffect } from 'react';
-import './Carrosels.css'; // attention à la casse et au chemin
+import './Carrosels.css';
 
 const images = [
   "/assets/devweb1.jpg",
   "/assets/graph.jpg",
   "/assets/tech.jpg",
- 
 ];
 
 function Carrosels() {
@@ -20,8 +18,18 @@ function Carrosels() {
   }, []);
 
   return (
-    <div className="carrosels">
-      <img src={images[index]} alt={`slide-${index}`} />
+    <div
+      className="carrousel-diagonal"
+      style={{ backgroundImage: `url(${images[index]})` }}
+    >
+      <div className="diagonal-text">
+        <h1>
+              Une solution créative pour <span className="text-warning">Développer</span><br />
+              votre business
+         </h1>
+        <p>Développement Web, <br />Graphisme et Technologies Innovantes</p>
+        <button className="btn btn-primary">En savoir plus</button>
+      </div>
     </div>
   );
 }
