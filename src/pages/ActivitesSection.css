@@ -1,0 +1,52 @@
+.activites-section {
+  background: linear-gradient(to right, #080e56, #0b1d9e);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 400px;
+  height: auto;
+  border: 8px solid white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.activites-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activite-item {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 14px 25px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.activite-item:hover {
+  background-color: orange;
+  transform: scale(1.05);
+  color: white;
+  border-color: orange;
+}

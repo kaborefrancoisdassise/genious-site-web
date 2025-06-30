@@ -1,0 +1,83 @@
+/* Réinitialisation simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Polices personnalisées */
+.font-segoe {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bande supérieure violet foncé */
+.top-header {
+  background-color: #081952;
+  color: white;
+}
+
+/* Logo */
+.logo-img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  line-height: 0.8;
+}
+
+/* Icônes */
+.icon {
+  font-size: 28px;
+  color: orange;
+}
+
+/* Texte horaires/service client */
+.opening-hours small,
+.customer-service small {
+  font-size: 12px;
+}
+
+.opening-hours strong,
+.customer-service strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navigation principale avec animation */
+.main-nav {
+  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86fde8, #acb6e5);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  border-top: 1px solid #ddd;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.main-nav ul li a:hover {
+  background-color: #f58220;
+  color: white;
+}
+
+.search-icon {
+  font-size: 20px;
+  color: #111;
+  cursor: pointer;
+}
